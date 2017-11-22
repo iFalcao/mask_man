@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Icaro Falcao"]
   spec.email         = ["vbsfalcao@gmail.com"]
   spec.description   = %q{Abstraction of common regular expressions(regex) in Ruby}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/iFalcao/mask_man"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
