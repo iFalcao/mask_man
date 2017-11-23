@@ -20,6 +20,23 @@ Or install it yourself as:
 
 ## Usage
 
+We currently have 2 modules: `Convert` and `Validate`, let's see a example for each.
+
+If you want to remove all special characters from your string, that's fairly simple with MaskMan, just do as below:
+
+```ruby
+require MaskMan
+
+MaskMan::Convert.rm_special(your_string_here)
+```
+
+But in case you want to check the presence of a special character within your string, you can use:
+
+```ruby
+require MaskMan
+
+MaskMan::Validate.has_special_chars?(your_string_here)
+```
 
 ## Development
 
