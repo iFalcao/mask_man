@@ -29,7 +29,7 @@ If you want to remove all special characters from your string, that's fairly sim
 ```ruby
 require MaskMan
 
-MaskMan::Convert.rm_special(your_string_here)
+MaskMan::Convert.rm_special '(71) 3325-2564' # => '7133252564'
 ```
 
 But in case you want to check the presence of a special character within your string, you can use:
@@ -37,7 +37,8 @@ But in case you want to check the presence of a special character within your st
 ```ruby
 require MaskMan
 
-MaskMan::Validate.has_special_chars?(your_string_here)
+MaskMan::Validate.has_special_chars? '(71) 3325-2564' # => true
+MaskMan::Validate.has_special_chars? '7133252564' # => false
 ```
 
 ## Development
