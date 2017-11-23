@@ -50,6 +50,28 @@ RSpec.describe MaskMan do
         end
       end
     end
+
+    context 'method rm_numbers' do
+      context 'when the params are valid' do
+        it 'return only letters' do
+          expect( Convert.rm_numbers 'abc123def456' ).to eq('abcdef')
+        end
+  
+        it 'return letters and special chars' do
+          expect( Convert.rm_numbers 'abc123-\def456' ).to eq('abc-\def')
+        end
+      end
+  
+      context 'when the params are invalid' do
+        it 'return empty string when nil is passed' do
+          expect( Convert.rm_numbers nil ).to eq('')
+        end
+  
+        it 'return empty string when an empty string is passed' do
+          expect( Convert.rm_numbers '' ).to eq('')
+        end
+      end
+    end
   end
 
   describe 'Validate Module' do
