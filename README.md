@@ -1,4 +1,6 @@
-# MaskMan
+# MaskMan 
+
+[![Build Status](https://travis-ci.org/iFalcao/mask_man.svg?branch=master)](https://travis-ci.org/iFalcao/mask_man)
 
 > Abstraction of the most common regular expressions (Regex) for your Ruby application. Validate and convert your strings fast and easy with Maskman. See **Usage** for more instructions and examples.
 
