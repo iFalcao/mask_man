@@ -11,5 +11,9 @@ module MaskMan
     def self.rm_numbers string
       return string == nil ? '' : string.gsub(/[0-9]/, '')
     end
+
+    def self.only_letters string
+      return string == nil ? '' : string.gsub(/[^A-Za-z]/, '')
+    end
   end
 end

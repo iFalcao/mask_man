@@ -53,7 +53,7 @@ RSpec.describe MaskMan do
 
     context 'method rm_numbers' do
       context 'when the params are valid' do
-        it 'return only letters' do
+        it 'return string without numbers' do
           expect( Convert.rm_numbers 'abc123def456' ).to eq('abcdef')
         end
   
@@ -69,6 +69,28 @@ RSpec.describe MaskMan do
   
         it 'return empty string when an empty string is passed' do
           expect( Convert.rm_numbers '' ).to eq('')
+        end
+      end
+    end
+
+    context 'method only_letters' do
+      context 'when the params are valid' do
+        it 'return a new string with only letters' do
+          expect( Convert.only_letters 'abc123def456' ).to eq('abcdef')
+        end
+  
+        it 'removes numbers and special chars' do
+          expect( Convert.only_letters 'abc123-\def456' ).to eq('abcdef')
+        end
+      end
+  
+      context 'when the params are invalid' do
+        it 'return empty string when nil is passed' do
+          expect( Convert.only_letters nil ).to eq('')
+        end
+  
+        it 'return empty string when an empty string is passed' do
+          expect( Convert.only_letters '' ).to eq('')
         end
       end
     end
