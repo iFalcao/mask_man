@@ -94,6 +94,29 @@ RSpec.describe MaskMan do
         end
       end
     end
+
+    context 'method only_numbers' do
+      context 'when the params are valid' do
+        it 'return a new string with only numbers' do
+          expect( Convert.only_numbers 'abc123def456' ).to eq('123456')
+        end
+  
+        it 'removes letters and special chars' do
+          expect( Convert.only_numbers 'abc123-\def456' ).to eq('123456')
+        end
+      end
+  
+      context 'when the params are invalid' do
+        it 'return empty string when nil is passed' do
+          expect( Convert.only_numbers nil ).to eq('')
+        end
+  
+        it 'return empty string when an empty string is passed' do
+          expect( Convert.only_numbers '' ).to eq('')
+        end
+      end
+    end
+
   end
 
   describe 'Validate Module' do
