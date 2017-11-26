@@ -13,7 +13,7 @@ module MaskMan
         end
       end
       
-      contains
+      return contains
     end
 
     def self.only_asc?(string)
@@ -26,7 +26,7 @@ module MaskMan
         end
       end
 
-      only_asc
+      return only_asc
     end
 
     def self.count_special_chars(string)
