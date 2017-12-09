@@ -15,10 +15,6 @@ RSpec.describe MaskMan::Convert do
     end
 
     context 'when the params are invalid' do
-      it 'return empty string when nil is passed' do
-        expect( Convert.rm_special nil ).to eq('')
-      end
-
       it 'return empty string when an empty string is passed' do
         expect( Convert.rm_special '' ).to eq('')
       end
@@ -37,10 +33,6 @@ RSpec.describe MaskMan::Convert do
     end
 
     context 'when the params are invalid' do
-      it 'return empty string when nil is passed' do
-        expect( Convert.rm_letters nil ).to eq('')
-      end
-
       it 'return empty string when an empty string is passed' do
         expect( Convert.rm_letters '' ).to eq('')
       end
@@ -59,10 +51,6 @@ RSpec.describe MaskMan::Convert do
     end
 
     context 'when the params are invalid' do
-      it 'return empty string when nil is passed' do
-        expect( Convert.rm_numbers nil ).to eq('')
-      end
-
       it 'return empty string when an empty string is passed' do
         expect( Convert.rm_numbers '' ).to eq('')
       end
@@ -81,10 +69,6 @@ RSpec.describe MaskMan::Convert do
     end
 
     context 'when the params are invalid' do
-      it 'return empty string when nil is passed' do
-        expect( Convert.only_letters nil ).to eq('')
-      end
-
       it 'return empty string when an empty string is passed' do
         expect( Convert.only_letters '' ).to eq('')
       end
@@ -103,10 +87,6 @@ RSpec.describe MaskMan::Convert do
     end
 
     context 'when the params are invalid' do
-      it 'return empty string when nil is passed' do
-        expect( Convert.only_numbers nil ).to eq('')
-      end
-
       it 'return empty string when an empty string is passed' do
         expect( Convert.only_numbers '' ).to eq('')
       end

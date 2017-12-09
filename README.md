@@ -32,7 +32,7 @@ require MaskMan
 MaskMan::Convert.rm_special '(71) 3325-2564' # => '7133252564'
 ```
 
-But in case you want to check the presence of a special character within your string, you can use:
+In case you want to check the presence of a special character within your string, you can use:
 
 ```ruby
 require MaskMan
